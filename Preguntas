@@ -1,0 +1,37 @@
+1. ¿Qué es Vue.js y cuál es su función en esta página?
+Vue.js es un framework de JavaScript utilizado para construir interfaces de usuario de forma moderna y eficiente. Su función principal en este proyecto es actuar como el "cerebro" de la página, permitiendo que la interfaz reaccione automáticamente cuando los datos cambian. En lugar de recargar la página completa, Vue actualiza solo las partes necesarias, permitiendo que la validación y conversión de JSON a CSV ocurra de forma instantánea y fluida para el usuario.
+
+2. Variables Reactivas Utilizadas
+En esta aplicación se utilizaron 5 variables reactivas principales:
+
+inputTexto: Almacena el texto que el usuario escribe o pega en el cuadro de entrada.
+
+formatoDestino: Guarda la opción seleccionada (CSV o JSON Formateado) para saber qué proceso aplicar.
+
+errorMensaje: Contiene el texto de las alertas de error cuando el usuario ingresa datos inválidos.
+
+historial: Un arreglo (array) que guarda los registros de cada conversión exitosa realizada.
+
+mostrarHistorial: Un valor booleano (true/false) que decide si el panel de registros debe estar visible o no.
+
+3. Diferencia entre v-bind y v-model
+v-model: Es una directiva de "doble vía" (two-way binding). Se utilizó para conectar los inputs (como el textarea) con las variables. Si el usuario escribe, la variable cambia; si la variable cambia por código, el texto en pantalla también se actualiza.
+
+v-bind: Es una directiva de "una sola vía". Se utilizó para enlazar atributos de las etiquetas HTML a datos de Vue. Por ejemplo, se usó para cambiar dinámicamente el color del borde del cuadro de texto (borderColor) dependiendo de si existía un error o no.
+
+4. Ejemplo de Evento Utilizado
+Se utilizó el evento @click (que es la abreviatura de v-on:click). Este evento se activó cuando el usuario presionó el botón "Procesar y Validar Datos", disparando la función encargada de analizar el JSON y realizar la conversión.
+
+5. Uso de la Directiva v-for
+La directiva v-for se utilizó para generar dinámicamente la lista de elementos en el historial. Permite recorrer el arreglo historial y crear una etiqueta <li> por cada conversión registrada, mostrando la fecha y el tipo de archivo procesado sin tener que escribir código HTML repetitivo.
+
+6. Situación de uso de v-if
+Se utilizó v-if en dos situaciones críticas:
+
+Validación de Errores: Para mostrar el mensaje de error solo cuando la variable errorMensaje contiene texto. Si no hay error, el elemento simplemente no existe en el DOM.
+
+Control de Interfaz: Para mostrar u ocultar la sección del historial de conversiones, permitiendo que la interfaz se mantenga limpia y organizada.
+
+7. Validación de Datos y su Importancia
+La validación se realiza mediante una función lógica que primero verifica si el campo está vacío con .trim() y luego intenta procesar el texto con JSON.parse().
+Importancia: Validar es fundamental en ingeniería para prevenir que el sistema falle (crash) al intentar procesar datos corruptos o vacíos. Además, garantiza la integridad de la información y mejora la experiencia del usuario al proporcionar retroalimentación clara sobre qué debe corregir.
