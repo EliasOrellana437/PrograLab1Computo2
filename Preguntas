@@ -1,3 +1,8 @@
+Integrantes; Elias Ernesto Vazques Orellana SMSS211023
+             Ariel Adolfo Diaz Sosa SMSS109224
+
+
+
 1. ¿Qué es Vue.js y cuál es su función en esta página?
 Vue.js es un framework de JavaScript utilizado para construir interfaces de usuario de forma moderna y eficiente. Su función principal en este proyecto es actuar como el "cerebro" de la página, permitiendo que la interfaz reaccione automáticamente cuando los datos cambian. En lugar de recargar la página completa, Vue actualiza solo las partes necesarias, permitiendo que la validación y conversión de JSON a CSV ocurra de forma instantánea y fluida para el usuario.
 
