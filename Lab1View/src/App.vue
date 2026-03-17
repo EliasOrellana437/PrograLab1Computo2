@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import MiComponent from './MiComponent.vue';
+
+</script>
 
 <template>
   <h1>You did it!</h1>
@@ -6,6 +9,8 @@
     Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
     documentation
   </p>
+
+  <MiComponent></MiComponent>
 </template>
 
 <style scoped></style>
