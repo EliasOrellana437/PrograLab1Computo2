@@ -55,7 +55,6 @@ const jsonToCsv = (items) => {
 const limpiarCampos = () => {
   inputTexto.value = "";
   errorMensaje.value = "";
-  // Si también quieres limpiar el historial, podrías poner: historial.value = [];
   alert("Formulario limpiado");
 };
 </script>
@@ -130,7 +129,7 @@ const limpiarCampos = () => {
 
 <style scoped>
 
-/* 1. Fondo para toda la aplicación (se aplica al contenedor principal) */
+
 #app {
   background-color: #f4f7f6; /* Un gris muy claro azulado */
   border: 2px solid #34495e;  /* Marco sólido color azul oscuro */
@@ -140,7 +139,7 @@ const limpiarCampos = () => {
   margin-top: 50px !important;
 }
 
-/* 2. Estilo para los títulos */
+/* Estilo para los títulos */
 h1 {
   color: #2c3e50;
   text-align: center;
@@ -148,7 +147,7 @@ h1 {
   padding-bottom: 10px;
 }
 
-/* 3. Estilo del marco del área de texto (Input) */
+/* Estilo del marco del área de texto (Input) */
 textarea {
   font-family: 'Courier New', Courier, monospace;
   background-color: #ffffff;
@@ -156,7 +155,7 @@ textarea {
   transition: all 0.3s ease; /* Suaviza el cambio de color al error */
 }
 
-/* 4. Estilo para los botones */
+/* Estilo para los botones */
 button {
   font-weight: bold;
   text-transform: uppercase;
@@ -167,7 +166,7 @@ button:hover {
   transform: scale(1.02); /* Efecto de que el botón resalta al pasar el mouse */
 }
 
-/* 5. Marco para la sección del historial */
+/* Marco para la sección del historial */
 .historial-section {
   background-color: #ffffff;
   border-left: 5px solid #42b883; /* Marco lateral tipo "nota" */
