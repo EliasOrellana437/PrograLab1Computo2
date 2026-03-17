@@ -108,8 +108,8 @@ const limpiarCampos = () => {
         {{ mostrarHistorial ? 'Ocultar Historial' : 'Mostrar Historial' }}
       </button>
 
-      <div v-if="mostrarHistorial">
-        <h3>Historial de conversiones</h3>
+<div v-if="mostrarHistorial" class="historial-section">
+    <h3>Historial de conversiones</h3>
         <p v-if="historial.length === 0">No hay conversiones registradas aún.</p>
         
         <ul>
@@ -130,11 +130,49 @@ const limpiarCampos = () => {
 
 <style scoped>
 
-textarea {
-  font-family: monospace;
-  background-color: #f9f9f9;
+/* 1. Fondo para toda la aplicación (se aplica al contenedor principal) */
+#app {
+  background-color: #f4f7f6; /* Un gris muy claro azulado */
+  border: 2px solid #34495e;  /* Marco sólido color azul oscuro */
+  border-radius: 15px;       /* Bordes redondeados del marco */
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra para dar profundidad */
+  margin-top: 50px !important;
 }
+
+/* 2. Estilo para los títulos */
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  border-bottom: 2px solid #42b883; /* Línea decorativa bajo el título */
+  padding-bottom: 10px;
+}
+
+/* 3. Estilo del marco del área de texto (Input) */
+textarea {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ffffff;
+  border: 1.5px solid #bdc3c7;
+  transition: all 0.3s ease; /* Suaviza el cambio de color al error */
+}
+
+/* 4. Estilo para los botones */
+button {
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 0.2s;
+}
+
 button:hover {
-  background-color: #35495e !important;
+  transform: scale(1.02); /* Efecto de que el botón resalta al pasar el mouse */
+}
+
+/* 5. Marco para la sección del historial */
+.historial-section {
+  background-color: #ffffff;
+  border-left: 5px solid #42b883; /* Marco lateral tipo "nota" */
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 </style>
